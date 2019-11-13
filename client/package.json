@@ -14,7 +14,6 @@
     "author": "erlang-ls",
     "license": "MIT",
     "dependencies": {
-        "socket-retry-connect": "0.0.1",
         "vscode-languageclient": "^5.2.1"
     },
     "devDependencies": {

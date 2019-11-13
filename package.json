@@ -21,7 +21,7 @@
     "author": "erlang_ls",
     "license": "MIT",
     "engines": {
-        "vscode": "^1.22.0"
+        "vscode": "^1.33.0"
     },
     "activationEvents": [
         "onLanguage:erlang"
@@ -50,6 +50,8 @@
         ]
     },
     "files": [
-        "erlang_ls/_build"
-    ]
+        "erlang_ls/_build",
+        "erlang.tmbundle"
+    ],
+    "dependencies": {}
 }
