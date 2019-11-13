@@ -1,0 +1,6 @@
+[submodule "erlang_ls"]
+	path = erlang_ls
+	url = https://github.com/erlang-ls/erlang_ls.git
+[submodule "erlang.tmbundle"]
+	path = erlang.tmbundle
+	url = https://github.com/textmate/erlang.tmbundle.git
