@@ -1,8 +1,8 @@
 {
     "name": "erlang_ls",
     "version": "0.0.1",
-    "description": "The Erlang Language Server extension for VS Code",
-    "homepage": "https://github.com/erlang-ls/vscode#readme",
+    "description": "The Visual Studio Code Extension for the Erlang Language Server",
+    "homepage": "https://github.com/erlang-ls/vscode",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/erlang-ls/vscode.git"
