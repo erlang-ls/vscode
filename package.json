@@ -40,6 +40,13 @@
                     ".config"
                 ]
             }
+        ],
+        "grammars": [
+            {
+                "language": "erlang",
+                "scopeName": "source.erlang",
+                "path": "./erlang.tmbundle/Syntaxes/Erlang.plist"
+            }
         ]
     },
     "files": [
