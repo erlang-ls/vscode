@@ -1,14 +1,14 @@
 {
     "name": "erlang_ls",
     "version": "0.0.1",
-    "description": "Erlang Language Server",
+    "description": "The Erlang Language Server extension for VS Code",
     "homepage": "https://github.com/erlang-ls/vscode#readme",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/erlang-ls/vscode.git"
     },
     "bugs": {
-        "url": "https://github.com/erlang-ls/erlang_ls/issues"
+        "url": "https://github.com/erlang-ls/vscode/issues"
     },
     "main": "./client/out/client.js",
     "scripts": {
