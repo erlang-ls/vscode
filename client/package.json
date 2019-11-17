@@ -1,25 +1,26 @@
 {
-    "name": "erlang_ls-vscode",
-    "version": "0.0.1",
-    "description": "erlang_ls for VS Code",
-    "engines": {
-        "vscode": "^1.33.0"
-    },
-    "scripts": {
-        "update-vscode": "vscode-install",
-        "postinstall": "vscode-install",
-        "compile": "tsc -b",
-        "watch": "tsc -b -w"
-    },
-    "author": "erlang-ls",
-    "license": "Apache-2.0",
-    "dependencies": {
-        "vscode-languageclient": "^5.2.1"
-    },
-    "devDependencies": {
-        "@types/node": "^8.0.0",
-        "vscode": "^1.1.36",
-        "tslint": "^5.16.0",
-        "typescript": "^3.5.1"
-    }
+  "name": "erlang-ls-client",
+  "version": "0.0.1",
+  "publisher": "erlang-ls",
+  "description": "VS Code client for erlang-ls",
+  "engines": {
+    "vscode": "^1.33.0"
+  },
+  "scripts": {
+    "update-vscode": "vscode-install",
+    "postinstall": "vscode-install",
+    "compile": "tsc -b",
+    "watch": "tsc -b -w"
+  },
+  "author": "erlang-ls",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "vscode-languageclient": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.0",
+    "vscode": "^1.1.36",
+    "tslint": "^5.16.0",
+    "typescript": "^3.5.1"
+  }
 }
