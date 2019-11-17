@@ -20,7 +20,7 @@
     "postinstall": "cd client && npm install"
   },
   "author": "erlang_ls",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "engines": {
     "vscode": "^1.33.0"
   },

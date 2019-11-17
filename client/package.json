@@ -12,7 +12,7 @@
         "watch": "tsc -b -w"
     },
     "author": "erlang-ls",
-    "license": "MIT",
+    "license": "Apache-2.0",
     "dependencies": {
         "vscode-languageclient": "^5.2.1"
     },
