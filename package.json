@@ -1,6 +1,7 @@
 {
-  "name": "erlang_ls",
+  "name": "erlang-ls",
   "version": "0.0.1",
+  "publisher": "erlang-ls",
   "description": "The Visual Studio Code Extension for the Erlang Language Server",
   "homepage": "https://github.com/erlang-ls/vscode",
   "repository": {
