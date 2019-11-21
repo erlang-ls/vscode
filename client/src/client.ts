@@ -33,6 +33,7 @@ export async function activate(context: ExtensionContext) {
 
     client = new LanguageClient(
         'erlang_ls',
+        'Erlang LS',
         serverOptions,
         clientOptions
     );
