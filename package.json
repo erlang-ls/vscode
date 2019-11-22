@@ -69,7 +69,7 @@
     ]
   },
   "files": [
-    "erlang_ls/_build",
+    "erlang_ls/_build/default/bin/erlang_ls",
     "erlang.tmbundle"
   ],
   "dependencies": {}
