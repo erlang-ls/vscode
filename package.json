@@ -43,6 +43,13 @@
           ],
           "default": "off",
           "description": "Traces the communication between VS Code and the Erlang language server."
+        },
+        "erlang_ls.executable_path": {
+          "scope": "resource",
+          "type": "string",
+          "default": "",
+          "description":
+            "Set the path to your erlang_ls executable, if it's not already on your $PATH. Works with ~, ${HOME} and ${workspaceFolder}."
         }
       }
     },

@@ -21,9 +21,12 @@ export async function activate(context: ExtensionContext) {
         }
     };
 
-    let serverPath = context.asAbsolutePath(
-        path.join('erlang_ls', '_build', 'default', 'bin', 'erlang_ls')
-    );
+    let serverPath = workspace.getConfiguration('erlang_ls').executable_path;
+    if (serverPath === "") {
+        serverPath = context.asAbsolutePath(
+            path.join('erlang_ls', '_build', 'default', 'bin', 'erlang_ls')
+        );
+    };
 
     let serverOptions: ServerOptions = {
         command: serverPath,
