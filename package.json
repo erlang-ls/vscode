@@ -7,7 +7,7 @@
   "homepage": "https://github.com/erlang-ls/vscode",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/erlang-ls/vscode.git"
+    "url": "https://github.com/erlang-ls/vscode.git"
   },
   "bugs": {
     "url": "https://github.com/erlang-ls/vscode/issues"
@@ -57,7 +57,8 @@
           ".hrl",
           ".src",
           ".config"
-        ]
+        ],
+        "configuration": "./language-configuration.json"
       }
     ],
     "grammars": [
