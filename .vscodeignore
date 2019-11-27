@@ -1,3 +1,8 @@
 erlang_ls
 !erlang_ls/_build/*/bin/erlang_ls
 !erlang_ls/images/erlang-ls-logo-small.png
+
+erlang.tmbundle/Commands
+erlang.tmbundle/Macros
+erlang.tmbundle/Preferences
+erlang.tmbundle/Snippets
