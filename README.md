@@ -4,9 +4,16 @@ The erlang-ls extension for VSCode.
 
 ## Changelog
 
+### 0.0.4
+
+Extension:
+
+- Do not include un-necessary files in the package, reducing the
+  extension size from 20MB to 15MB
+
 ### 0.0.3
 
-Client:
+Extension:
 
 - Add configuration option to enable tracing calls between client and server
 
