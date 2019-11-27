@@ -4,6 +4,25 @@ The erlang-ls extension for VSCode.
 
 ## Changelog
 
+### 0.0.5
+
+Extension:
+
+- Ignore TextMate folders that are not used by the extension
+- Add language configuration, including comments and brackets
+
+Server:
+
+- Report server version on startup
+- Fix ranges for compiler diagnostics
+- Fix completion of function/arity in export lists
+- Introduce document highlighting
+- Improve performance of workspace symbol lookups
+- Add completion for record names
+- Improve indexing performances
+- Properly cleanup outdated references
+- Other bug fixes and stability improvements
+
 ### 0.0.4
 
 Extension:
