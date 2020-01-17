@@ -72,5 +72,7 @@
     "erlang_ls/_build/default/bin/erlang_ls",
     "erlang.tmbundle"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "vscode-languageclient": "6.0.0"
+  }
 }
