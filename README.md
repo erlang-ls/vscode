@@ -4,6 +4,36 @@ The erlang-ls extension for VSCode.
 
 ## Changelog
 
+### 0.0.6
+
+Extension:
+
+- Bump vscode-languageclient to 6.0.0
+
+Server:
+
+- Add navigation to callback functions for OTP behaviours
+- Add support for folding ranges
+- Allow a system-wide erlang_ls.config file
+- Show edoc for local functions
+- Support cancel requests
+- Fix support for Dialyzer diagnostics
+- Show errors from included .hrl files
+- Correctly handle macros on record access
+- Remove dependency on wx
+- Use platform-dependent log directories
+- Automatically generate diagnostics when opening a file
+- Limit the amount of symbols returned as workspace symbols
+- Add plumbing for a formatter
+- Add support for umbrella projects
+- Add code completion for record fields
+- Use a persistent database (Mnesia) to store indexed information
+- Add support for Elvis diagnostics
+- Handle multiple export sections
+- Do not crash on un-handled extensions
+- Do not crash when macros are used as function names
+- Other bug fixes and stability improvements
+
 ### 0.0.5
 
 Extension:
