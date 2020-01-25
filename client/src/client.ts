@@ -22,7 +22,7 @@ export async function activate(context: ExtensionContext) {
     };
 
     let serverPath = context.asAbsolutePath(
-        path.join('erlang_ls', '_build', 'default', 'bin', 'erlang_ls')
+        path.join('erlang_ls', '_build', 'debug', 'bin', 'erlang_ls')
     );
 
     let serverOptions: ServerOptions = {

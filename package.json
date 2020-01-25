@@ -20,7 +20,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "vscode:prepublish": "cd client && npm run update-vscode && cd .. && npm run compile",
-    "compile": "cd erlang_ls && make && cd ../client && npm run compile",
+    "compile": "cd erlang_ls && rebar3 as debug escriptize && cd ../client && npm run compile",
     "watch": "cd client && npm run watch",
     "postinstall": "cd client && npm install"
   },
@@ -74,7 +74,7 @@
     ]
   },
   "files": [
-    "erlang_ls/_build/default/bin/erlang_ls",
+    "erlang_ls/_build/debug/bin/erlang_ls",
     "erlang.tmbundle"
   ],
   "dependencies": {
