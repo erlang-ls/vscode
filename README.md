@@ -29,7 +29,7 @@ not alone. We got you covered.
 
 Display warnings and errors from the compiler inline.
 
-![Signature Suggestions](https://github.com/erlang-ls/docs/raw/master/gif/vscode/04-signature-suggestions.gif)
+![Compiler Diagnostics](https://github.com/erlang-ls/docs/raw/master/png/vscode/05-compiler-diagnostics.png)
 
 ### Dialyzer Diagnostics
 
