@@ -74,6 +74,13 @@ Focus on what's important, fold the rest.
 
 ## Changelog
 
+### 0.0.7
+
+Extension:
+
+- Add list of features to README
+- Enable debug mode
+
 ### 0.0.6
 
 Extension:
