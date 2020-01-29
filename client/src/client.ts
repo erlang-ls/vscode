@@ -26,8 +26,8 @@ export async function activate(context: ExtensionContext) {
     );
 
     let serverOptions: ServerOptions = {
-        command: serverPath,
-        args: [ "--transport", "stdio" ],
+        command: 'escript',
+        args: [ serverPath, "--transport", "stdio" ],
         transport: TransportKind.stdio
     };
 
