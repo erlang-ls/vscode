@@ -21,9 +21,12 @@ export async function activate(context: ExtensionContext) {
         }
     };
 
-    let serverPath = context.asAbsolutePath(
-        path.join('erlang_ls', '_build', 'debug', 'bin', 'erlang_ls')
-    );
+    let serverPath = workspace.getConfiguration('erlang_ls').serverPath;
+    if (serverPath === "") {
+        serverPath = context.asAbsolutePath(
+            path.join('erlang_ls', '_build', 'debug', 'bin', 'erlang_ls')
+        );
+    }
 
     let serverOptions: ServerOptions = {
         command: 'escript',

@@ -47,6 +47,13 @@
           ],
           "default": "off",
           "description": "Traces the communication between VS Code and the Erlang language server."
+        },
+        "erlang_ls.serverPath": {
+          "scope": "window",
+          "type": "string",
+          "default": "",
+          "description":
+          "Override the default path of the erlang_ls executable with a custom one."
         }
       }
     },
