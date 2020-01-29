@@ -74,6 +74,13 @@ Focus on what's important, fold the rest.
 
 ## Changelog
 
+### 0.0.8
+
+Extension:
+
+- Fix support for Windows
+- Add option to override the path to the language server
+
 ### 0.0.7
 
 Extension:
