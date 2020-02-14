@@ -28,9 +28,15 @@ export async function activate(context: ExtensionContext) {
         );
     }
 
+    let serverArgs = [serverPath, "--transport", "stdio"];
+    let logPath = workspace.getConfiguration('erlang_ls').logPath;
+    if (logPath !== "") {
+        serverArgs.push("--log-dir", logPath);
+    }
+
     let serverOptions: ServerOptions = {
         command: 'escript',
-        args: [ serverPath, "--transport", "stdio" ],
+        args: serverArgs,
         transport: TransportKind.stdio
     };
 
