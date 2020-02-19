@@ -18,6 +18,11 @@ export async function activate(context: ExtensionContext) {
                 workspace.createFileSystemWatcher('**/rebar.config'),
                 workspace.createFileSystemWatcher('**/rebar.lock')
             ]
+        },
+        initializationOptions: {
+           erlang: {
+               config_path: workspace.getConfiguration('erlang_ls').get('config.path'),
+           }
         }
     };
 

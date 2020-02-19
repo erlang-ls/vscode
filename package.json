@@ -54,7 +54,13 @@
           "default": "",
           "description":
           "Override the default path of the erlang_ls executable with a custom one."
+        },
+        "erlang_ls.config.path": {
+          "type": "string",
+          "description": "Path to the erlang_ls.config file. This can either be absolute or relative to the project root",
+          "default": ""
         }
+
       }
     },
     "languages": [
