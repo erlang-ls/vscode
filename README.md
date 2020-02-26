@@ -74,11 +74,11 @@ Focus on what's important, fold the rest.
 
 ## Changelog
 
-### 0.1.0-a
+### 0.1.0.0
 
 Extension:
 
-- Switch to a different version schema (Erlang LS version + letter)
+- Switch to a different version schema (Erlang LS version + Extension version)
 
 Server:
 
