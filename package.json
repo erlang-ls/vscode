@@ -54,6 +54,22 @@
           "default": "",
           "description":
           "Override the default path of the erlang_ls executable with a custom one."
+        },
+        "erlang_ls.logLevel": {
+          "scope": "window",
+          "enum": [
+            "none",
+            "debug",
+            "info",
+            "notice",
+            "warning",
+            "error",
+            "critical",
+            "alert",
+            "emergency"
+          ],
+          "default": "info",
+          "description": "Log level of LS server"
         }
       }
     },
