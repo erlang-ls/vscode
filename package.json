@@ -74,7 +74,7 @@
             "alert",
             "emergency"
           ],
-          "default": "info",
+          "default": "none",
           "description": "Log level of LS server"
         }
       }
