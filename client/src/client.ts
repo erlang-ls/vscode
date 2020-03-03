@@ -26,9 +26,12 @@ export async function activate(context: ExtensionContext) {
         serverPath = context.asAbsolutePath(
             path.join('erlang_ls', '_build', 'debug', 'bin', 'erlang_ls')
         );
-    }
+    };
 
-    let serverArgs = [serverPath, "--transport", "stdio"];
+    let logLevel = workspace.getConfiguration('erlang_ls').logLevel;
+
+    let serverArgs = [ serverPath, "--transport", "stdio", "--log-level", logLevel ];
+
     let logPath = workspace.getConfiguration('erlang_ls').logPath;
     if (logPath !== "") {
         serverArgs.push("--log-dir", logPath);
