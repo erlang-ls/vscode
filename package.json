@@ -1,7 +1,7 @@
 {
   "name": "erlang-ls",
   "displayName": "Erlang LS",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "publisher": "erlang-ls",
   "description": "The Visual Studio Code Extension for the Erlang Language Server",
   "categories": [
@@ -59,6 +59,28 @@
           "type": "string",
           "description": "Path to the erlang_ls.config file. This can either be absolute or relative to the project root",
           "default": ""
+        },
+        "erlang_ls.logPath": {
+          "scope": "window",
+          "type": "string",
+          "default": "",
+          "description": "Override the default directory erlang_ls logs to."
+        }, 
+        "erlang_ls.logLevel": {
+          "scope": "window",
+          "enum": [
+            "none",
+            "debug",
+            "info",
+            "notice",
+            "warning",
+            "error",
+            "critical",
+            "alert",
+            "emergency"
+          ],
+          "default": "info",
+          "description": "Log level of LS server"
         }
 
       }

@@ -74,6 +74,22 @@ Focus on what's important, fold the rest.
 
 ## Changelog
 
+### 0.0.9
+
+Server:
+
+- Add support for behaviours diagnostics (compiler, dialyzer)
+- Add support for parse transform (compiler)
+- Find references for records
+- Fix support for `$/` notifications and requests
+- Be able to specify a different location for the `erlang_ls.config` file
+- Fix issue with Elvis diagnostics polluting stdio
+- Add root uri to start-up message
+- Fix include_dirs passed to Dialyzer
+- Inject exit message when TCP socket is closed
+- Add support for custom macros
+- Add support for hot-code reloading
+
 ### 0.0.8
 
 Extension:
