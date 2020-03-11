@@ -74,6 +74,33 @@ Focus on what's important, fold the rest.
 
 ## Changelog
 
+### 0.0.10
+
+Extension:
+
+- Configurable log level (default: none)
+- Configurable log path
+
+Server:
+
+- Add auto completion for types in `spec` and `export_types` contexts
+- Fix Elvis diagnostics for modules not belonging to the workspace
+- Fix off-by-one folding ranges for some editors
+- Restrict dependencies from accessing stdio, avoiding crashes on hover
+- Speed up indexing
+- Add syntax-highlighting for hover information
+- Fix inclusion path for dependencies
+- Show function information when hovering the `export` list
+- Add plumbing for code lenses
+- Find module references
+- Find macro references
+- Update code formatter to latest available version
+- Fix ranges for Dialyzer diagnostics
+- Avoid crash in presence of : within strings
+- Fix supervision strategy
+- Avoid un-necessary parsing
+- Asynchronous diagnostics
+
 ### 0.0.9
 
 Server:
