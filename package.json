@@ -89,6 +89,7 @@
           ".erl",
           ".hrl",
           ".src",
+          ".escript",
           ".config"
         ],
         "configuration": "./language-configuration.json"
