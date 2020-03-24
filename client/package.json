@@ -4,7 +4,7 @@
   "publisher": "erlang-ls",
   "description": "VS Code client for erlang-ls",
   "engines": {
-    "vscode": "^1.33.0"
+    "vscode": "^1.42.0"
   },
   "scripts": {
     "update-vscode": "vscode-install",
@@ -15,7 +15,7 @@
   "author": "erlang-ls",
   "license": "Apache-2.0",
   "dependencies": {
-    "vscode-languageclient": "^5.2.1"
+    "vscode-languageclient": "^6.1.3"
   },
   "devDependencies": {
     "@types/node": "^8.0.0",
