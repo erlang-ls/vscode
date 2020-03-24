@@ -74,6 +74,35 @@ Focus on what's important, fold the rest.
 
 ## Changelog
 
+### 0.0.11
+
+Extension:
+
+- Include .escript among known file extensions
+
+Server:
+
+- Improve URI handling
+- Introduce support for code lenses
+- Introduce server-info code lense (disabled by default)
+- Fix some Windows incompatibilities
+- Avoid the entire server crashing in case of failing providers
+- Improve support for Unicode
+- Introduce background jobs
+- Show progress while indexing
+- Fix handling of empty RootUri (Sublime users should enjoy this)
+- Add support for .escript files
+- Update logging framework
+- Add support for finding type references
+- Enable logging by default
+- Remove eflame dependency
+- Add auto-completion for built-in functions and types
+- Goto definition on an atom goes to that module if it exists
+- Fix symlinks handling
+- Add auto-completion for atoms
+- Add edoc support for OTP modules (requires OTP 23 once available)
+- Introduce CLI help menu via getopt
+
 ### 0.0.10
 
 Extension:

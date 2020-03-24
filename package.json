@@ -1,7 +1,7 @@
 {
   "name": "erlang-ls",
   "displayName": "Erlang LS",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "publisher": "erlang-ls",
   "description": "The Visual Studio Code Extension for the Erlang Language Server",
   "categories": [
@@ -27,7 +27,7 @@
   "author": "erlang_ls",
   "license": "Apache-2.0",
   "engines": {
-    "vscode": "^1.33.0"
+    "vscode": "^1.42.0"
   },
   "activationEvents": [
     "onLanguage:erlang"
@@ -52,15 +52,14 @@
           "scope": "window",
           "type": "string",
           "default": "",
-          "description":
-          "Override the default path of the erlang_ls executable with a custom one."
+          "description": "Override the default path of the erlang_ls executable with a custom one."
         },
         "erlang_ls.logPath": {
           "scope": "window",
           "type": "string",
           "default": "",
           "description": "Override the default directory erlang_ls logs to."
-        }, 
+        },
         "erlang_ls.logLevel": {
           "scope": "window",
           "enum": [
@@ -108,6 +107,6 @@
     "erlang.tmbundle"
   ],
   "dependencies": {
-    "vscode-languageclient": "6.0.0"
+    "vscode-languageclient": "6.1.3"
   }
 }
