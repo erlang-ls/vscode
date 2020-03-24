@@ -1,7 +1,7 @@
 {
   "name": "erlang-ls",
   "displayName": "Erlang LS",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "publisher": "erlang-ls",
   "description": "The Visual Studio Code Extension for the Erlang Language Server",
   "categories": [
@@ -60,7 +60,7 @@
           "type": "string",
           "default": "",
           "description": "Override the default directory erlang_ls logs to."
-        }, 
+        },
         "erlang_ls.logLevel": {
           "scope": "window",
           "enum": [
