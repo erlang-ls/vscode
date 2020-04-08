@@ -8,7 +8,7 @@
     "Programming Languages"
   ],
   "icon": "erlang_ls/images/erlang-ls-logo-small.png",
-  "homepage": "https://github.com/erlang-ls/vscode",
+  "homepage": "https://erlang-ls.github.io",
   "repository": {
     "type": "git",
     "url": "https://github.com/erlang-ls/vscode.git"
