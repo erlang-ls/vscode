@@ -19,7 +19,7 @@
   "main": "./client/out/client.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "vscode:prepublish": "cd client && npm run update-vscode && cd .. && npm run compile",
+    "vscode:prepublish": "cd client && npm run compile",
     "compile": "cd erlang_ls && rebar3 as debug escriptize && cd ../client && npm run compile",
     "watch": "cd client && npm run watch",
     "postinstall": "cd client && npm install"
@@ -27,7 +27,7 @@
   "author": "erlang_ls",
   "license": "Apache-2.0",
   "engines": {
-    "vscode": "^1.42.0"
+    "vscode": "^1.43.0"
   },
   "activationEvents": [
     "onLanguage:erlang"
@@ -106,7 +106,12 @@
     "erlang_ls/_build/debug/bin/erlang_ls",
     "erlang.tmbundle"
   ],
-  "dependencies": {
-    "vscode-languageclient": "6.1.3"
+  "devdependencies": {
+    "@types/mocha": "^5.2.7",
+    "mocha": "^6.2.2",
+    "@types/node": "^12.12.0",
+    "eslint": "^6.4.0",
+    "@typescript-eslint/parser": "^2.3.0",
+    "typescript": "^3.8.3"
   }
 }
