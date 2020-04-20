@@ -2,6 +2,10 @@
   "name": "erlang-ls-client",
   "version": "0.0.1",
   "publisher": "erlang-ls",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erlang-ls/vscode"
+  },
   "description": "VS Code client for erlang-ls",
   "engines": {
     "vscode": "^1.43.0"
