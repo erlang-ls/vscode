@@ -1,6 +1,13 @@
 # erlang-ls/vscode
 
-The erlang-ls extension for VSCode.
+The [Erlang LS](https://github.com/erlang-ls/erlang_ls) extension for
+VSCode. The documentation for Erlang LS is available at:
+
+https://erlang-ls.github.io
+
+It is possible to customize the extension for a given project via an
+`erlang_ls.config` file. [Learn
+how](https://erlang-ls.github.io/configuration/).
 
 ## Available Features
 
