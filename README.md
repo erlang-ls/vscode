@@ -81,6 +81,10 @@ Focus on what's important, fold the rest.
 
 ## Changelog
 
+### 0.0.13
+
+This release is equivalent to `0.0.12`, but built using OTP 21, to avoid issues for old OTP users
+
 ### 0.0.12
 
 Extension:
