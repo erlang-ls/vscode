@@ -1,7 +1,7 @@
 {
   "name": "erlang-ls",
   "displayName": "Erlang LS",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "publisher": "erlang-ls",
   "description": "The Visual Studio Code Extension for the Erlang Language Server",
   "categories": [
@@ -106,7 +106,7 @@
     "erlang_ls/_build/debug/bin/erlang_ls",
     "erlang.tmbundle"
   ],
-  "devdependencies": {
+  "devDependencies": {
     "@types/mocha": "^5.2.7",
     "mocha": "^6.2.2",
     "@types/node": "^12.12.0",

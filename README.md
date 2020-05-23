@@ -81,6 +81,51 @@ Focus on what's important, fold the rest.
 
 ## Changelog
 
+### 0.0.12
+
+Extension:
+
+- Link documentation from README
+- Fix security alert for minimalist dependency
+- Add missing repository property to avoid warning
+- Bump VSCode dependencies
+- Ignore files according to the lsp-sample extension
+- Bump erlang_ls to 0.4.0
+
+Server:
+
+- Add support for OTP 23
+- Fix support for OTP Doc Chunks
+- Show diagnostics for module dependencies
+- Use correct compilation options when reloading module dependencies
+- Do not crash when fetching docs for escriptized modules
+- Do not crash if root path contains spaces
+- Introduce log message when starting a new session
+- Add experimental XREF diagnostics (disabled by default)
+- Fix bug which caused a server crash when a notification contained a tilde (~)
+- When multiple instances of the same module are indexed, sort them deterministically
+- Fix various issues affecting Windows users
+- Allow underscore macros
+- Introduce experimental runtime node
+- Introduce experimental code lens for running CT tests (disabled by default)
+- New logo \o/
+- Fix support for parse transforms
+- Include module name in progress reports for diagnostics
+- Wait for tables asynchronously
+- Add support for unbound progress reports
+- Show progress progress during DB initialization
+- Be able to jump to definition from a module import
+- Switch to stdio as the default transport
+- Be able to enable/disable code lenses and diagnostics
+- Do not consider all functions from the erlang module as BIFs
+- Remove deprecated port option from escript
+- Introduce general provider
+- Add code lens to show behaviour usages
+- Fix race condition where a server-initiated request was occasionally seen as a response
+- Fix type mismatch between protocol and transport types
+- Precalculate type specs
+- Minor fixes and improvements
+
 ### 0.0.11
 
 Extension:
