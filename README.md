@@ -81,6 +81,13 @@ Focus on what's important, fold the rest.
 
 ## Changelog
 
+### 0.0.14
+
+Server:
+
+- Do not attempt to load dependencies from sticky directories
+- Fix crash from asking erl_lint format our own error messages
+
 ### 0.0.13
 
 This release is equivalent to `0.0.12`, but built using OTP 21, to avoid issues for old OTP users
