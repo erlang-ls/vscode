@@ -81,6 +81,25 @@ Focus on what's important, fold the rest.
 
 ## Changelog
 
+### 0.0.15
+
+Server:
+
+- Do not crash while fetching docs due to missing encoding
+- Fix support for OTP 23 in CI
+- Remove obsolete `company-lsp` instructions
+- Pass custom macros to Dialyzer
+- Assume `COMPLETION_TRIGGER_KIND_INVOKED` when no context is provided
+- Do not ask for _text_ on save
+- Include experimental support for _DAP_ protocol
+- Add loop detection into dependency discovery
+- Fix path to PLT cache in CI
+- Handle `epp` error messages as diagnostics for included files
+- Remove spurious call to `els_dt_document:lookup/1`
+- Provide `serverInfo` in `initialize` response
+- Include OTP path to `server-info` lens to ease troubleshooting
+- Add support for `COMPLETION_TRIGGER_KIND_FOR_INCOMPLETE_COMPLETIONS`
+
 ### 0.0.14
 
 Server:
