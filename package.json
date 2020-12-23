@@ -103,7 +103,7 @@
     ]
   },
   "files": [
-    "erlang_ls/_build/debug/bin/erlang_ls",
+    "erlang_ls/_build/default/bin/erlang_ls",
     "erlang.tmbundle"
   ],
   "devDependencies": {
