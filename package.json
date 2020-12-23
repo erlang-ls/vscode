@@ -20,7 +20,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "vscode:prepublish": "cd client && npm run compile",
-    "compile": "cd erlang_ls && rebar3 as debug escriptize && cd ../client && npm run compile",
+    "compile": "cd erlang_ls && rebar3 escriptize && cd ../client && npm run compile",
     "watch": "cd client && npm run watch",
     "postinstall": "cd client && npm install"
   },
