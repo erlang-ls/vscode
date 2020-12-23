@@ -81,6 +81,30 @@ Focus on what's important, fold the rest.
 
 ## Changelog
 
+### 0.0.16
+
+Server:
+
+- Add support for [snippets](https://erlang-ls.github.io/articles/snippets-are-here/)
+- Fix a number of bugs related to POI ranges (thanks to @garazdawi)
+- Complete with arity only when dealing with a remote fun
+- Complete facelift for docs on hover
+- Include function clauses on hover
+- Refactor docs handling into separate module
+- Separate docs fetching from formatting
+- Refactor test code for hover into separate modules
+- Introduce symbol highlighting
+- More robust els_code_navigation:find_in_document/5 (thanks to @alanz)
+- Add support for renaming macros and callback functions
+- Be able to navigate to record definitions from types (thanks to @onno-vos-dev )
+- Include project name in Erlang LS node names
+- Add support for code navigation for record definitions from type specs
+- Rename "xref" diagnostics to "crossref" (since they don't use XRef)
+- Add support for unused include files detection
+- Do not report crossref diagnostics for known pseudo-functions
+- Make docs chunk search use Erlang LS DB rather than code path
+- Remove dependency on Mnesia, use ETS only
+
 ### 0.0.15
 
 Server:
