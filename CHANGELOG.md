@@ -1,5 +1,26 @@
 ## Changelog
 
+### 0.0.17
+
+Extension:
+
+- Fork grammar used for Syntax Highlighting
+- Move CHANGELOG to separate file
+- Remove references to `debug` profile
+
+Server:
+
+- Suggest type specifications via TypEr
+- Jump to definition for parse transforms
+- Show OTP version on startup
+- Take into account parse transforms runtime dependencies
+- Silence Elvis during tests
+- Don't crash if compiler options are not found (thanks to @zsoci)
+- Handle macros in patterns (thanks to @gomoripeti)
+- Be able to add directories to code path via the code_path_extra_dirs config parameter (thanks to @zsoci)
+- Remove leftovers of db_dir (thanks to @gomoripeti)
+- Be able to define a custom path for the elvis.config file via the elvis_config_path config parameter (thanks to @define-null)
+
 ### 0.0.16
 
 Server:
