@@ -1,5 +1,14 @@
 ## Changelog
 
+### 0.0.18
+
+Server (0.8.0 -> 0.9.0):
+
+- Support jumping from record field to record definition (thanks to @gomoripeti)
+- Allow usage of long names for the runtime node (thanks to @zsoci)
+- Fix macro renaming, where one extra character was deleted (thanks to @gomoripeti)
+- Build Dialyzer Persistent Lookup Table (plt) as part of make ci (thanks to @alanz)
+
 ### 0.0.17
 
 Extension:
