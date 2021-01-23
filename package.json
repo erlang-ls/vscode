@@ -1,7 +1,7 @@
 {
   "name": "erlang-ls",
   "displayName": "Erlang LS",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "publisher": "erlang-ls",
   "description": "The Visual Studio Code Extension for the Erlang Language Server",
   "categories": [
