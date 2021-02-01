@@ -20,11 +20,18 @@ jobs:
       with:
         node-version: 14.x
     - name: Setup Erlang/Elixir
-      uses: actions/setup-elixir@v1
+      uses: erlef/setup-elixir@v1
       with:
         otp-version: 21.3
         elixir-version: 1.11.3
     - run: npm install
     - run: npm run compile
+    - name: Install VSCE
+      run: npm install -g vsce
     - name: Package
       run: vsce package
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: erlang-ls.vsix
+        path: erlang-ls-*.vsix
