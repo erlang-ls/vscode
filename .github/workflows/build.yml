@@ -26,5 +26,7 @@ jobs:
         elixir-version: 1.11.3
     - run: npm install
     - run: npm run compile
+    - name: Install VSCE
+      run: npm install -g vsce
     - name: Package
       run: vsce package
