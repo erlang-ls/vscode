@@ -1,0 +1,29 @@
+name: Build
+  push:
+    branches:
+      - '*'
+  pull_request:
+    types:
+      - opened
+      - synchronize
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Checkout submodules
+      run: git submodule update --init --recursive
+    - name: Install Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14.x
+    - name: Setup Erlang/Elixir
+        uses: actions/setup-elixir@v1
+        with:
+          otp-version: 21.3
+          elixir-version: 1.11.3
+    - run: npm install
+    - run: npm run compile
+    - name: Package
+      run: vsce package
