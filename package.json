@@ -18,6 +18,7 @@
   },
   "main": "./client/out/client.js",
   "scripts": {
+    "package": "vsce package --yarn",
     "test": "echo \"Error: no test specified\" && exit 1",
     "vscode:prepublish": "cd client && npm run compile",
     "compile": "cd erlang_ls && rebar3 escriptize && cd ../client && npm run compile",
