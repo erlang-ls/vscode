@@ -24,6 +24,8 @@ jobs:
       with:
         otp-version: 21.3
         elixir-version: 1.11.3
+    - name: Install vsce
+      run: yarn add vsce --dev
     - run: npm install
     - run: npm run compile
     - name: Package
