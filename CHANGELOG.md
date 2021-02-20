@@ -1,5 +1,27 @@
 ## Changelog
 
+### 0.0.19
+
+Grammar:
+
+- Fix support for ~
+
+Server (0.9.0 -> 0.10.0):
+
+- Detect unused macros
+- Migrate from lager to OTP logger
+- Highlight already bound variables in patterns (thanks @gomoripeti)
+- Reduce memory consumption for POIs up to 80% (thanks @gomoripeti)
+- Improve DAP support (thanks @TheGeorge)
+- Experimental support for formatting code via the BSP protocol
+- Find references from all function clauses (thanks @gomoripeti)
+- Add Windows CI
+- Improve POI detection in attributes (thanks @gomoripeti)
+- Fix OTP 24 compiler warnings (thanks @garazdawi)
+- Handle macros in type attributes (thanks @gomoripeti)
+- Converted project to umbrella app (thanks @TheGeorge)
+- Fix support for quoted atoms (thanks @keynslug)
+
 ### 0.0.18
 
 Server (0.8.0 -> 0.9.0):
