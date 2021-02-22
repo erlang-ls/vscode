@@ -17,10 +17,10 @@
   "author": "erlang-ls",
   "license": "Apache-2.0",
   "dependencies": {
-    "vscode-languageclient": "^6.1.4"
+    "vscode-languageclient": "^7.0.0"
   },
   "devDependencies": {
-    "@types/vscode": "1.43.0",
-    "vscode-test": "^1.5.0"
+    "@types/vscode": "^1.53.0",
+    "vscode-test": "^1.5.1"
   }
 }
