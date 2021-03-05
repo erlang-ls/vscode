@@ -1,5 +1,17 @@
 ## Changelog
 
+### 0.0.20
+
+Server (0.10.0 -> 0.11.0):
+
+- Jump to definition for non fully-qualified BIFs (thanks @al-khanji)
+- Implement `completionItem/resolve`
+- Fix extraction of spec when showing docs (thanks @gomoripeti)
+- Handle unicode when pretty printing function clauses (thanks @gomoripeti)
+- Make DAP connection to the node hidden (thanks @TheGeorge)
+- Ensure files are indexed when accessed for the first time (thanks @sgillis)
+- Add support for logpoints and fix the watchlist in DAP (thanks @TheGeorge)
+
 ### 0.0.19
 
 Grammar:
