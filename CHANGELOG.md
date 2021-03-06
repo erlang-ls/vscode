@@ -1,5 +1,12 @@
 ## Changelog
 
+### 0.0.21
+
+Extension:
+
+- Add basic indentation rules
+- Add closing pairs for quotes, single quotes and binaries
+
 ### 0.0.20
 
 Server (0.10.0 -> 0.11.0):
