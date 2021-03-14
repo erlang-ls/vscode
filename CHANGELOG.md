@@ -1,5 +1,21 @@
 ## Changelog
 
+### 0.0.22
+
+Extension:
+
+- Bump outdated dependencies (thanks to @maxno-kivra)
+
+Server (0.11.0 -> 0.12.0):
+
+- Compress document ETS table, reducing RAM consumption (thanks @seriyps)
+- Fix support for snippets
+- Fix Elvis configuration and address linting issues
+- Remove dependency on cowlib, reducing size of the escript and
+  compilation times
+- Enable `bound_var_in_pattern`, `unused_includes` and `unused_macros`
+  diagnostics by default
+
 ### 0.0.21
 
 Extension:
