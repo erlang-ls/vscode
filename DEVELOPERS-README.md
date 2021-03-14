@@ -18,3 +18,23 @@ npm install
 npm run compile
 vsce package
 ```
+
+## Updating npm
+
+```
+npm install -g npm@latest
+```
+
+## Updating dependencies
+
+Look for outdated packages:
+
+```
+npm outdated
+```
+
+Update the `package.json`
+
+```
+npm update
+```
