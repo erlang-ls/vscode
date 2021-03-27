@@ -1,5 +1,19 @@
 ## Changelog
 
+### 0.0.23
+
+Server (0.12.0 -> 0.13.0):
+
+- Fix config file used by PropEr tests (thanks @pablocostass)
+- Self-describing specs
+- New code lens (named function-references) to show references to a function
+- Optimize indexing (~4x speedup) (thanks @seriyps)
+- Add support for cancelling requests
+- Honour $/cancelRequest in the suggest-specs code lens
+- Limit completion to unexported functions when in an -export (thanks @plux)
+- Jump to variable definition (thanks @plux)
+- Fix linting issues (thanks @plux)
+
 ### 0.0.22
 
 Extension:
