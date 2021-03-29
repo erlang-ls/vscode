@@ -1,7 +1,7 @@
 {
   "name": "erlang-ls",
   "displayName": "Erlang LS",
-  "version": "0.0.24",
+  "version": "0.0.25",
   "publisher": "erlang-ls",
   "description": "The Visual Studio Code Extension for the Erlang Language Server",
   "categories": [
@@ -16,12 +16,12 @@
   "bugs": {
     "url": "https://github.com/erlang-ls/vscode/issues"
   },
-  "main": "./client/out/client.js",
+  "main": "./client/out/extension.js",
   "scripts": {
     "package": "vsce package",
     "test": "echo \"Error: no test specified\" && exit 1",
     "vscode:prepublish": "cd client && npm run compile",
-    "compile": "cd erlang_ls && rebar3 escriptize && cd ../client && npm run compile",
+    "compile": "cd erlang_ls && rebar3 escriptize && rebar3 as dap escriptize && cd ../client && npm run compile",
     "watch": "cd client && npm run watch",
     "postinstall": "cd client && npm install"
   },
@@ -54,6 +54,12 @@
           "type": "string",
           "default": "",
           "description": "Override the default path of the erlang_ls executable with a custom one."
+        },
+        "erlang_ls.dapPath": {
+          "scope": "window",
+          "type": "string",
+          "default": "",
+          "description": "Override the default path of the els_dap executable with a custom one."
         },
         "erlang_ls.logPath": {
           "scope": "window",
@@ -101,17 +107,127 @@
         "scopeName": "source.erlang",
         "path": "./grammar/Erlang.plist"
       }
+    ],
+    "breakpoints": [
+      {
+        "language": "erlang"
+      }
+    ],
+    "debuggers": [
+      {
+        "type": "erlang",
+        "label": "Erlang OTP Debugger",
+        "initialConfigurations": [
+          {
+            "name": "rebar shell",
+            "type": "erlang",
+            "request": "launch",
+            "runinterminal": [
+              "rebar3",
+              "shell",
+              "--sname",
+              "dap-project-node@localhost",
+              "--setcookie",
+              "COOKIE"
+            ],
+            "projectnode": "dap-project-node@localhost",
+            "cookie": "COOKIE",
+            "timeout": 300,
+            "cwd": "${workspaceRoot}"
+          },
+          {
+            "name": "rebar shell --start-clean",
+            "type": "erlang",
+            "request": "launch",
+            "runinterminal": [
+              "rebar3",
+              "shell",
+              "--sname",
+              "dap-project-node@localhost",
+              "--setcookie",
+              "COOKIE",
+              "--start-clean"
+            ],
+            "projectnode": "dap-project-node@localhost",
+            "cookie": "COOKIE",
+            "timeout": 300,
+            "cwd": "${workspaceRoot}"
+          }
+        ],
+        "configurationAttributes": {
+          "launch": {
+            "required": [
+              "projectnode"
+            ],
+            "properties": {
+              "cwd": {
+                "type": "string",
+                "description": "Working directory for runinterminal",
+                "default": "${workspaceRoot}"
+              },
+              "stopOnEntry": {
+                "type": "boolean",
+                "description": "Stop after launch (unused)",
+                "default": "true"
+              },
+              "module": {
+                "type": "string",
+                "description": "Module for the launch M:F(A)",
+                "default": "io"
+              },
+              "function": {
+                "type": "string",
+                "description": "Funtion for the launch M:F(A)",
+                "default": "format"
+              },
+              "args": {
+                "type": "string",
+                "description": "Args for the launch M:F(A)",
+                "default": "[\"Hello World\"]"
+              },
+              "runinterminal": {
+                "type": "array",
+                "description": "launch command",
+                "default": [
+                  "rebar3",
+                  "shell",
+                  "--sname",
+                  "dap-project-node@localhost",
+                  "--setcookie",
+                  "COOKIE"
+                ]
+              },
+              "projectnode": {
+                "type": "string",
+                "description": "name of the target node that the debugger connects to",
+                "default": "dap-project-node@localhost"
+              },
+              "cookie": {
+                "type": "string",
+                "description": "The magic cookie used to connect to the projectnode",
+                "default": "COOKIE"
+              },
+              "timeout": {
+                "type": "integer",
+                "description": "Timeout for connecting to the projectnode after starting the debugger.",
+                "default": 300
+              }
+            }
+          }
+        }
+      }
     ]
   },
   "files": [
     "erlang_ls/_build/default/bin/erlang_ls",
+    "erlang_ls/_build/dap/bin/els_dap",
     "erlang.tmbundle"
   ],
   "devDependencies": {
-    "@types/mocha": "^8.2.1",
-    "@types/node": "^14.14.34",
-    "@typescript-eslint/parser": "^4.17.0",
-    "eslint": "^7.22.0",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^14.14.37",
+    "@typescript-eslint/parser": "^4.19.0",
+    "eslint": "^7.23.0",
     "mocha": "^8.3.2",
     "typescript": "^4.2.3",
     "vsce": "^1.87.0"
