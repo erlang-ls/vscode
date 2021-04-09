@@ -1,5 +1,22 @@
 ## Changelog
 
+### 0.0.24
+
+Server (0.13.0 -> 0.14.0):
+
+- Add support for renaming variables (thanks @plux)
+- Add support for renaming functions(thanks @plux)
+- Fix invalid crossref warnings for remote calls to module_info/0,1 (thanks @plux)
+- Supply completions for POIs in includes recursively (thanks @plux)
+- Add support for OTP 24 (thanks @garazdawi)
+- Show column numbers in compiler warnings (OTP 24+) (thanks @garazdawi)
+- More robust go-to definition in case of overlapping POIs (thanks @plux)
+- Add completion support for module attributes (thanks @plux)
+- Add context-based support for behaviour, include and include_lib (thanks @plux)
+- Show macro definitions on hover (thanks @plux)
+- Jump to definition from export_type entries (thanks @plux)
+- Cancel requests asynchronously
+
 ### 0.0.23
 
 Server (0.12.0 -> 0.13.0):
