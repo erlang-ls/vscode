@@ -10,7 +10,7 @@ import {
 
 let client: LanguageClient;
 
-export async function activate(context: ExtensionContext) {
+export async function get_client(context: ExtensionContext): Promise<LanguageClient> {
     let clientOptions: LanguageClientOptions = {
         documentSelector: [{ scheme: 'file', language: 'erlang' }],
         synchronize: {
@@ -43,19 +43,10 @@ export async function activate(context: ExtensionContext) {
         transport: TransportKind.stdio
     };
 
-    client = new LanguageClient(
+    return new LanguageClient(
         'erlang_ls',
         'Erlang LS',
         serverOptions,
         clientOptions
     );
-
-    client.start();
-}
-
-export function deactivate(): Thenable<void> | undefined {
-    if (!client) {
-        return undefined;
-    }
-    return client.stop();
 }
