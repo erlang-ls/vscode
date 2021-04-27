@@ -2,6 +2,10 @@
 
 ### 0.0.25
 
+Extension:
+
+- Add support for debugger (thanks @TheGeorge)
+
 Server (0.14.0 -> 0.15.0):
 
 - Return references if no definitions are found (thanks @TheGeorge)
