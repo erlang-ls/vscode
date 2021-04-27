@@ -1,5 +1,13 @@
 ## Changelog
 
+### 0.0.25
+
+Server (0.14.0 -> 0.15.0):
+
+- Return references if no definitions are found (thanks @TheGeorge)
+- Fix incorrect bound variable warnings in fun expression heads (thanks @gomoripeti)
+- Clear stalled indicator on termination (thanks @zsoci)
+
 ### 0.0.24
 
 Server (0.13.0 -> 0.14.0):
