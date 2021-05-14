@@ -24,7 +24,7 @@ class ErlangDebugAdapterExecutableFactory implements vscode.DebugAdapterDescript
         _executable: vscode.DebugAdapterExecutable | undefined,
     ): Promise<vscode.ProviderResult<vscode.DebugAdapterDescriptor>> {
         const erlangConfig = vscode.workspace;
-        const executable = erlangConfig.getConfiguration('erlang_ls').get<string>('dap_command') || '';
+        const executable = erlangConfig.getConfiguration('erlang_ls').get<string>('dapPath') || '';
 
         let command;
         let args;
