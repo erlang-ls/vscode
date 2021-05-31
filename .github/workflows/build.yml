@@ -19,11 +19,11 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 14.x
-    - name: Setup Erlang/Elixir
-      uses: erlef/setup-elixir@v1
+    - name: Setup Erlang
+      uses: erlef/setup-beam@v1
       with:
         otp-version: 21.3
-        elixir-version: 1.11.3
+        rebar3-version: 3.15.2
     - run: npm install
     - run: npm run compile
     - name: Install VSCE

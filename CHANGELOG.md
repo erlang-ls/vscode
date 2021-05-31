@@ -1,5 +1,30 @@
 ## Changelog
 
+### 0.0.26
+
+Extension:
+
+- Fix debugger executable override path (thanks @RunyaoZhang)
+- Execute debugger via `escript` to ensure it works on Windows (thanks @misaki214)
+
+Server (0.15.0 -> 0.16.0):
+
+- Support renaming for record names and record fields (thanks @gomoripeti)
+- Correctly decode path to custom configuration on Windows (thanks @misaki214)
+- Allow config file to be named erlang_ls.yaml in addition to erlang_ls.config (thanks @elbrujohalcon)
+- Implement support for incremental text synchronization (thanks @plux)
+- Fix finding references for types defined in header files (thanks @plux)
+- Upgrade ranch dependency to 2.0.0 (thanks @plux)
+- Fix scoping for macro and record referencing (thanks @gomoripeti)
+- Use column numbers for Dialyzer diagnostics when available (thanks @plux)
+- Fix Dialyzer diagnostics support for OTP 24 (thanks @plux)
+- Truncate suggested spec titles (thanks @hellmean)
+- Improve installation instructions (thanks @pierre-rouleau)
+- Allow renaming functions when pointing at function references (thanks @plux)
+- Fix crash in function references code lens (thanks @hellmean)
+- Debugger support for conditions and hitconditions for breakpoints and logpoints (thanks @hajduakos)
+- Use erlfmt for parsing (thanks @gomoripeti)
+
 ### 0.0.25
 
 Extension:
