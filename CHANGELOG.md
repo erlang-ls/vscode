@@ -1,5 +1,21 @@
 ## Changelog
 
+### 0.0.27
+
+Server (0.16.0 -> 0.17.0):
+
+- Prevent infinite recursion when enumerating document POIs (thanks @keynslug)
+- Fix creating macro POIs in function applications (thanks @gomoripeti)
+- Add logging via window/LogMessage (thanks @TheGeorge)
+- Find implementations for callback functions
+- Fix completion for incomplete export entry (thanks @gomoripete)
+- Fix docs for macros with arguments (thanks @gomoripeti)
+- Add support for renaming types (thanks @plux)
+- Add support for long names in DAP (thanks @zsoci)
+- Implement dummy handler for pause in DAP (thanks @TheGeorge)
+- Remove TCP support
+- Add support for attach in DAP (thanks @RunyaoZhang)
+
 ### 0.0.26
 
 Extension:
