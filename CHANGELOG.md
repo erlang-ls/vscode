@@ -1,5 +1,40 @@
 ## Changelog
 
+### 0.0.28
+
+Server (0.17.0 -> 0.18.0):
+
+- Fix issue with code reloading when no cookie is set up
+- Fix support for multiple threads in DAP continue request (thanks @TheGeorge)
+- Add guidelines on encoding binaries
+- Publish escripts as part of CI
+- Specify category for DAP events, so they get displayed via the Emacs UI
+- Speed up detection of unused includes (thanks @keynslug)
+- Fix issue with the initialization of the DAP server
+- Fix display of DAP logpoints
+- Show warning in case of missing configuration file
+- Reduce log level of events related to background jobs and compilation
+- Support macros as record names
+- Ignore Emacs backup and temporary files (thanks @pierre-rouleau)
+- Refactor distribution and improve support for longnames (thanks @zsoci)
+- Fix crash when applying edits to unicode text (thanks @plux)
+- Add hover support on record expressions (thanks @ztion)
+
+Grammar:
+
+- Comma is not needed in '-define' on the same line as macro name (thanks @danielfinke)
+- Allow comment between '}' and ').' in record definitions (thanks @KornelH)
+- Allow variables as module or function names in implicit function expressions (thanks @KornelH)
+- Distinguish function type in type specification and explicit function expression (thanks @KornelH)
+- Assign file extensions to Erlang mode: escript, yrl, xrl (thanks @KornelH)
+- '$' is a valid ASCII number (thanks @KornelH)
+- Escape sequences '^a'..'^z' are valid (and same as '^A'..'^Z') (thanks @KornelH)
+- Escape sequences '\xXY' (where XY are hexadecimal digits) are valid (thanks @KornelH)
+- 'utf8', 'utf16' and 'utf32' are valid type specifiers in binary (thanks @KornelH)
+- Binary unit type specifier has a mandatory parameters as 'unit:<pos_integer>' (where <pos_integer> is in range 1..256) (thanks @KornelH)
+- Single underscore (_) can be inserted between digits as a visual separator (since OTP 23) (thanks @KornelH)
+- Highlight 'true', 'false' and 'undefined' language constants. Well, technically 'undefined' is not that but traditionally used like that. (thanks @KornelH)
+
 ### 0.0.27
 
 Server (0.16.0 -> 0.17.0):
