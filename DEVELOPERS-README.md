@@ -19,6 +19,12 @@ npm run compile
 vsce package
 ```
 
+## Publishing
+
+```
+vsce publish
+```
+
 ## Updating npm
 
 ```
@@ -38,3 +44,7 @@ Update the `package.json`
 ```
 npm update
 ```
+
+## Handling Access Tokens
+
+https://code.visualstudio.com/api/working-with-extensions/publishing-extension
