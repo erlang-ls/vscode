@@ -202,6 +202,11 @@
                 "description": "name of the target node that the debugger connects to",
                 "default": "dap-project-node@localhost"
               },
+              "use_long_names": {
+                "type": "boolean",
+                "description": "start erlang distribution with long names (-name option)",
+                "default": false
+              },
               "cookie": {
                 "type": "string",
                 "description": "The magic cookie used to connect to the projectnode",
