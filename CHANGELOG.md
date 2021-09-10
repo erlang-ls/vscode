@@ -1,5 +1,23 @@
 ## Changelog
 
+### 0.0.29
+
+Server (0.18.0 -> 0.19.0):
+
+- Add config option to exclude unused headers from warnings (thanks @NAR)
+- Introduce experimental BSP support (thanks @al-khanji)
+- Find non-parametrized macro definitions (thanks @NAR)
+- Fix type mismatch in unused_macros diagnostic (thanks @nwalker)
+- Enable incremental_sync by default
+- Introduce diagnostic codes for the OTP compiler (thanks @alanz)
+- Simplify protocol implementation (thanks @al-khanji)
+- Add telemetry/event notifications for compiler diagnostics (thanks @alanz)
+
+Extension:
+
+- Recognize keywords as brackets (`if...end`, `begin...end`, etc) (thanks @ztion)
+- Add `use_long_names` configuration option (thanks @zsoci)
+
 ### 0.0.28
 
 Server (0.17.0 -> 0.18.0):
