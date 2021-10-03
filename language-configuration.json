@@ -10,7 +10,8 @@
     [ "case", "end" ],
     [ "receive", "end" ],
     [ "begin", "end" ],
-    [ "try", "end" ]
+    [ "try", "end" ],
+    [ "fun", "end" ]
   ],
   "autoClosingPairs": [
     [ "(", ")" ],
