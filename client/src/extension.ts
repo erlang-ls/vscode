@@ -4,7 +4,7 @@ import { ExtensionContext } from 'vscode';
 
 import {
     LanguageClient,
-} from 'vscode-languageclient';
+} from 'vscode-languageclient/node';
 
 import { get_client } from './client';
 import { registerDebugAdapterDescriptorFactory } from './debugger';
