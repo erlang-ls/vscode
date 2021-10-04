@@ -4,11 +4,19 @@
 
 Server (0.19.0 -> 0.20.0):
 
-- 
+- Fix DAP not finding the source for a module by @maxno-kivra in https://github.com/erlang-ls/erlang_ls/pull/1084
+- Temporarily skip coveralls send by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1087
+- Mark headers with compiler attributes as used by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1085
+- Handle Elvis config errors by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1088
+- User background job for hover provider to avoid blocking request queue by @TheGeorge in https://github.com/erlang-ls/erlang_ls/pull/1091
+- Add support for Call Hierarchy by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1096
+- Detect unused record fields by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1099
+- Shutdown request does not include parameters by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1108
 
 Extension:
 
-- 
+- Remove keywords from brackets (thanks @DOBRO)
+- Add support for LSP 3.16 (bump vscode-languageclient to 7.0.0)
 
 ### 0.0.29
 
