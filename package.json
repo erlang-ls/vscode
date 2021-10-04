@@ -31,7 +31,7 @@
   "author": "erlang_ls",
   "license": "Apache-2.0",
   "engines": {
-    "vscode": "^1.54.0"
+    "vscode": "^1.60.0"
   },
   "activationEvents": [
     "onLanguage:erlang"
@@ -238,6 +238,6 @@
     "eslint": "^7.23.0",
     "mocha": "^9.1.2",
     "typescript": "^4.2.3",
-    "vsce": "^1.95.0"
+    "vsce": "^1.100.1"
   }
 }
