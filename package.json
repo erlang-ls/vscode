@@ -5,7 +5,10 @@
   "publisher": "erlang-ls",
   "description": "The Visual Studio Code Extension for the Erlang Language Server",
   "categories": [
-    "Programming Languages", "Snippets", "Debuggers", "Formatters"
+    "Programming Languages",
+    "Snippets",
+    "Debuggers",
+    "Formatters"
   ],
   "icon": "erlang_ls/images/erlang-ls-logo-small.png",
   "homepage": "https://erlang-ls.github.io",
