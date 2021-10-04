@@ -239,8 +239,5 @@
     "mocha": "^9.1.2",
     "typescript": "^4.2.3",
     "vsce": "^1.95.0"
-  },
-  "dependencies": {
-    "npm": "^7.24.1"
   }
 }
