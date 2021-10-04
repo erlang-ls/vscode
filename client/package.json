@@ -17,6 +17,7 @@
   "author": "erlang-ls",
   "license": "Apache-2.0",
   "dependencies": {
+    "npm": "^7.24.1",
     "vscode-languageclient": "^7.0.0"
   },
   "devDependencies": {

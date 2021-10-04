@@ -1,7 +1,7 @@
 {
   "name": "erlang-ls",
   "displayName": "Erlang LS",
-  "version": "0.0.29",
+  "version": "0.0.30",
   "publisher": "erlang-ls",
   "description": "The Visual Studio Code Extension for the Erlang Language Server",
   "categories": [
@@ -239,5 +239,8 @@
     "mocha": "^8.3.2",
     "typescript": "^4.2.3",
     "vsce": "^1.95.0"
+  },
+  "dependencies": {
+    "npm": "^7.24.1"
   }
 }
