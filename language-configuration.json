@@ -5,13 +5,7 @@
   "brackets": [
     [ "(", ")" ],
     [ "[", "]" ],
-    [ "{", "}" ],
-    [ "if", "end" ],
-    [ "case", "end" ],
-    [ "receive", "end" ],
-    [ "begin", "end" ],
-    [ "try", "end" ],
-    [ "fun", "end" ]
+    [ "{", "}" ]
   ],
   "autoClosingPairs": [
     [ "(", ")" ],
