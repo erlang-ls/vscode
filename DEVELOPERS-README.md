@@ -14,6 +14,7 @@ npm install -g typescript
 ```
 git submodule update --init
 rm -rf erlang_ls/_build
+rm -rf client/out
 npm install
 npm run compile
 vsce package
