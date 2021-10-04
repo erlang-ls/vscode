@@ -8,7 +8,7 @@
   },
   "description": "VS Code client for erlang-ls",
   "engines": {
-    "vscode": "^1.54.0"
+    "vscode": "^1.60.0"
   },
   "scripts": {
     "compile": "tsc -b",
