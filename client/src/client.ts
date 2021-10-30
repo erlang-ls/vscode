@@ -31,7 +31,7 @@ export async function get_client(context: ExtensionContext): Promise<LanguageCli
 
     let logLevel = workspace.getConfiguration('erlang_ls').logLevel;
 
-    let serverArgs = [ serverPath, "--transport", "stdio", "--log-level", logLevel ];
+    let serverArgs = [ serverPath, "--log-level", logLevel ];
 
     let logPath = workspace.getConfiguration('erlang_ls').logPath;
     if (logPath !== "") {
