@@ -1,5 +1,29 @@
 ## Changelog
 
+### 0.0.31
+
+Server (0.20.0 -> 0.21.0):
+
+- Ignore test data directories by @dgud in https://github.com/erlang-ls/erlang_ls/pull/1109
+- Discover test files automatically by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1111
+- Hover docs for fun expressions referring to local or remote functions by @gomoripeti in https://github.com/erlang-ls/erlang_ls/pull/1112
+- Update erlfmt to 1.0.0 by @gomoripeti in https://github.com/erlang-ls/erlang_ls/pull/1113
+- Add make target `clean` by @JimMoen in https://github.com/erlang-ls/erlang_ls/pull/1116
+- Provide a Gradualizer diagnostic by @erszcz in https://github.com/erlang-ls/erlang_ls/pull/1117
+- Eep 48 markdown by @garazdawi in https://github.com/erlang-ls/erlang_ls/pull/1100
+- Remove fragile heuristics from editable_range by @gomoripeti in https://github.com/erlang-ls/erlang_ls/pull/1126
+- Do not recurse in els_utils:fold_files by @dgud in https://github.com/erlang-ls/erlang_ls/pull/1122
+- Refactor test framework for diagnostics by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1129
+- Bring back `coveralls send` step in CI by @pablocostass in https://github.com/erlang-ls/erlang_ls/pull/1130
+- Remove TCP support by @adrianroe in https://github.com/erlang-ls/erlang_ls/pull/1131
+- Do not include error description in code by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1141
+- Lower docs log message level to DEBUG by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1144
+- Fix unicode output via stdout by @garazdawi in https://github.com/erlang-ls/erlang_ls/pull/1147
+
+Extension:
+
+- Show server stdout in case of starting error by @robertoaloi in https://github.com/erlang-ls/vscode/pull/114
+
 ### 0.0.30
 
 Server (0.19.0 -> 0.20.0):
