@@ -55,7 +55,7 @@ export async function get_client(context: ExtensionContext): Promise<LanguageCli
 }
 
 export function verifyExecutable(serverPath: string) {
-    const res = spawnSync(serverPath, ["-version"]);
+    const res = spawnSync(serverPath, ["--version"]);
     if (res.status !== 0) {
         window.showErrorMessage('Could not start Language Server. Error: ' + res.stdout);
     }
