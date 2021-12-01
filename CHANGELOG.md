@@ -2,7 +2,7 @@
 
 ### 0.0.31
 
-Server (0.20.0 -> 0.21.0):
+Server (0.20.0 -> 0.21.1):
 
 - Ignore test data directories by @dgud in https://github.com/erlang-ls/erlang_ls/pull/1109
 - Discover test files automatically by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1111
@@ -19,6 +19,7 @@ Server (0.20.0 -> 0.21.0):
 - Do not include error description in code by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1141
 - Lower docs log message level to DEBUG by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1144
 - Fix unicode output via stdout by @garazdawi in https://github.com/erlang-ls/erlang_ls/pull/1147
+- [#1149] Exit with 0 on --version by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1150
 
 Extension:
 
