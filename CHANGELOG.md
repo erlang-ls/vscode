@@ -1,5 +1,11 @@
 ## Changelog
 
+### 0.0.32
+
+Server (0.21.1 -> 0.21.2):
+
+- Revert unicode support by @garazdawi in https://github.com/erlang-ls/erlang_ls/pull/1151
+
 ### 0.0.31
 
 Server (0.20.0 -> 0.21.1):
