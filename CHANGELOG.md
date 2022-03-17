@@ -1,5 +1,65 @@
 ## Changelog
 
+### 0.0.33
+
+Server (0.25.0 -> 0.26.0):
+
+- Handle incomplete type definitions better by @gomoripeti in https://github.com/erlang-ls/erlang_ls/pull/1237
+- Avoid negative line numbers in elvis diagnostics. by @ztion in https://github.com/erlang-ls/erlang_ls/pull/1233
+- Only run EDoc diagnostics on .erl files by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1242
+- Update Gradualizer to the current master by @erszcz in https://github.com/erlang-ls/erlang_ls/pull/1239
+- Add support for custom EDoc tags by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1243
+- Reload project-specific files on every Graudalizer diagnostic run by @erszcz in https://github.com/erlang-ls/erlang_ls/pull/1240
+
+Server (0.24.0 -> 0.25.0):
+
+- Use Jaro distance for the unbound variable code action by @plux in https://github.com/erlang-ls/erlang_ls/pull/1225
+- Better support for goto definition when parsing is incomplete by @plux in https://github.com/erlang-ls/erlang_ls/pull/1224
+- supply quickfix to remove unused macro by @fangzhzh in https://github.com/erlang-ls/erlang_ls/pull/1226
+- Safer incremental sync by @plux in https://github.com/erlang-ls/erlang_ls/pull/1222
+- Add Fix for https://github.com/erlang-ls/erlang_ls/pull/1202 remove unused include by @rahulraina7 in https://github.com/erlang-ls/erlang_ls/pull/1227
+- Make it easier to include Erlang LS as a dependency. by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1229
+- DAP should return 0 on version command by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1230
+- Bump yamerl by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1231
+- Add missing upgrade to rebar.lock by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1232
+
+Server (0.23.1 -> 0.24.0):
+
+- Implement new code actions by @plux in https://github.com/erlang-ls/erlang_ls/pull/1212
+- Drop OTP 21 by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1215
+- Edoc diagnostics by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1213
+- Drop OTP 21 support in rebar.config and README by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1217
+
+Server (0.23.0 -> 0.23.1):
+
+- Fix support for renaming modules by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1199
+
+Server (0.22.0 -> 0.23.0):
+
+- Add case snippet by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1194
+- Add support for renaming modules by @plux in https://github.com/erlang-ls/erlang_ls/pull/1196
+- Fix handle module name whitespace by @plux in https://github.com/erlang-ls/erlang_ls/pull/1195
+- Revert "Precompute list of enabled diagnostics" by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1197
+
+Server (0.21.2 ->  0.22.0):
+
+- [#1152] Emit error in case the module name does not coincide with the filename by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1156
+- Parse incomplete text by @gomoripeti in https://github.com/erlang-ls/erlang_ls/pull/1146
+- [#1050] Add separate way to send log notification to avoid recursion by @AminArria in https://github.com/erlang-ls/erlang_ls/pull/1158
+- Precompute list of enabled diagnostics by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1172
+- [#1174] [emacs] Ensure keybinding is configured before loading lsp-mode by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1175
+- Fix parsing trailing comments in modules by @gomoripeti in https://github.com/erlang-ls/erlang_ls/pull/1178
+- Update elvis_core to deal with CRLF line endings by @lukebakken in https://github.com/erlang-ls/erlang_ls/pull/1176
+- Fix typos by @kianmeng in https://github.com/erlang-ls/erlang_ls/pull/1173
+- Augment local config onto global config by @plux in https://github.com/erlang-ls/erlang_ls/pull/1184
+- Fix issues with rename variable involving specs by @plux in https://github.com/erlang-ls/erlang_ls/pull/1183
+- Completion without snippets by @sirikid in https://github.com/erlang-ls/erlang_ls/pull/1170
+- Ensure that default node name is valid by @plux in https://github.com/erlang-ls/erlang_ls/pull/1182
+- Fix parsing of define arguments by @plux in https://github.com/erlang-ls/erlang_ls/pull/1186
+- Allow installing into custom directory by @HiPhish in https://github.com/erlang-ls/erlang_ls/pull/1188
+- Support renaming function when standing on spec by @plux in https://github.com/erlang-ls/erlang_ls/pull/1190
+- Improve goto definition for variables by @plux in https://github.com/erlang-ls/erlang_ls/pull/1187
+
 ### 0.0.32
 
 Server (0.21.1 -> 0.21.2):
