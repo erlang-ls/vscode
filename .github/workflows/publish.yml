@@ -1,0 +1,36 @@
+name: Publish
+on:
+  release:
+    types: [published]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Checkout submodules
+      run: git submodule update --init --recursive
+    - name: Install Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '17'
+    - name: Setup Erlang
+      uses: erlef/setup-beam@v1
+      with:
+        otp-version: 22
+        rebar3-version: 3.18.0
+    - name: Show NPM version
+      run: npm --version
+    - run: npm install
+    - run: npm run compile
+    - name: Install VSCE
+      run: npm install -g vsce
+    - name: Package
+      run: vsce package
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: erlang-ls.vsix
+        path: erlang-ls-*.vsix
+    - name: Publish extension to marketplace
+      run: vsce publish -p ${{ secrets.VSCE_PAT }}
