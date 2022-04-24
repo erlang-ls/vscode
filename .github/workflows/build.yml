@@ -22,8 +22,10 @@ jobs:
     - name: Setup Erlang
       uses: erlef/setup-beam@v1
       with:
-        otp-version: 21.3
-        rebar3-version: 3.15.2
+        otp-version: 22
+        rebar3-version: 3.18.0
+    - name: Show NPM version
+      run: npm --version
     - run: npm install
     - run: npm run compile
     - name: Install VSCE

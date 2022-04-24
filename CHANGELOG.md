@@ -1,5 +1,19 @@
 ## Changelog
 
+### 0.0.33
+
+Server (0.21.2 -> 0.29.0):
+
+- https://github.com/erlang-ls/erlang_ls/releases/tag/0.29.0
+- https://github.com/erlang-ls/erlang_ls/releases/tag/0.28.0
+- https://github.com/erlang-ls/erlang_ls/releases/tag/0.27.0
+- https://github.com/erlang-ls/erlang_ls/releases/tag/0.26.0
+- https://github.com/erlang-ls/erlang_ls/releases/tag/0.25.0
+- https://github.com/erlang-ls/erlang_ls/releases/tag/0.24.0
+- https://github.com/erlang-ls/erlang_ls/releases/tag/0.23.1
+- https://github.com/erlang-ls/erlang_ls/releases/tag/0.23.0
+- https://github.com/erlang-ls/erlang_ls/releases/tag/0.22.0
+
 ### 0.0.32
 
 Server (0.21.1 -> 0.21.2):
