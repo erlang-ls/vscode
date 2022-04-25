@@ -1,5 +1,18 @@
 ## Changelog
 
+### 0.0.34
+
+Server (0.29.0 -> 0.30.0):
+
+- Ensure EPMD is running when launching debugger by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1276
+- Refactor folding_ranges onto POIs, Add support for records. by @tks2103 in https://github.com/erlang-ls/erlang_ls/pull/1268
+- Support for adding undefined Function by @f2000357 in https://github.com/erlang-ls/erlang_ls/pull/1267
+- Document versioning by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1265
+- Do not reload file from disk on save by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1278
+- Use version from didOpen, use text from editor as source of truth by @robertoaloi in https://github.com/erlang-ls/erlang_ls/pull/1279
+
+https://github.com/erlang-ls/erlang_ls/releases/tag/0.30.0
+
 ### 0.0.33
 
 Server (0.21.2 -> 0.29.0):
