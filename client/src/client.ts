@@ -21,29 +21,34 @@ export async function get_client(context: ExtensionContext): Promise<LanguageCli
             ]
         },
         middleware: {
-			executeCommand: async (command, args, next) => {
+            executeCommand: async (command, args, next) => {
                 //Ask for user input if the argument contains {user_input: {type: string, text : string|null}}
-                if(args.length >= 1 && "user_input" in args[0] && "type" in args[0].user_input) {
+                //Currently used by Wrangler
+                if (args.length >= 1 && "user_input" in args[0] && "type" in args[0].user_input) {
                     var input: string;
                     switch (args[0].user_input.type) {
                         case "variable":
-                            input = await window.showInputBox({placeHolder: args[0].user_input.text, validateInput: (value) => {
-                                if (!/^[A-Z][\_a-zA-Z0-9\@]*$/.test(value)) { 
-                                    return "Name must be a valid Erlang variable name"; 
+                            input = await window.showInputBox({
+                                placeHolder: args[0].user_input.text, validateInput: (value) => {
+                                    if (!/^[A-Z][\_a-zA-Z0-9\@]*$/.test(value)) {
+                                        return "Name must be a valid Erlang variable name";
+                                    }
+                                    return null;
                                 }
-                                return null;
-                            }});
+                            });
                             break;
                         case "atom":
-                            input = await window.showInputBox({placeHolder: args[0].user_input.text ?? "New name", validateInput: (value) => {
-                                if (!/^[a-z][\_a-zA-Z0-9\@]*$/.test(value) || !/^[\'][\_a-zA-Z0-9\@]*[\']$/.test(value)) {
-                                    return "Name must be a valid Erlang atom"; 
+                            input = await window.showInputBox({
+                                placeHolder: args[0].user_input.text ?? "New name", validateInput: (value) => {
+                                    if (!(/^[a-z][\_a-zA-Z0-9\@]*$/.test(value) || /^[\'][\_a-zA-Z0-9\@]*[\']$/.test(value))) {
+                                        return "Name must be a valid Erlang atom";
+                                    }
+                                    return null;
                                 }
-                                return null;
-                            }});
+                            });
                             break;
                         case "file":
-                            const uri = await window.showOpenDialog({canSelectFiles: true, canSelectFolders: false, canSelectMany: false});
+                            const uri = await window.showOpenDialog({ canSelectFiles: true, canSelectFolders: false, canSelectMany: false });
                             if (uri !== undefined) {
                                 input = uri[0].fsPath;
                             }
@@ -58,8 +63,8 @@ export async function get_client(context: ExtensionContext): Promise<LanguageCli
                     }
                 };
                 return next(command, args);
-			}
-		}
+            }
+        }
     };
 
     let serverPath = workspace.getConfiguration('erlang_ls').serverPath;
