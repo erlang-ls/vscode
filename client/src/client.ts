@@ -19,7 +19,47 @@ export async function get_client(context: ExtensionContext): Promise<LanguageCli
                 workspace.createFileSystemWatcher('**/rebar.config'),
                 workspace.createFileSystemWatcher('**/rebar.lock')
             ]
-        }
+        },
+        middleware: {
+			executeCommand: async (command, args, next) => {
+                //Ask for user input if the argument contains {user_input: {type: string, text : string|null}}
+                if(args.length >= 1 && "user_input" in args[0] && "type" in args[0].user_input) {
+                    var input: string;
+                    switch (args[0].user_input.type) {
+                        case "variable":
+                            input = await window.showInputBox({placeHolder: args[0].user_input.text, validateInput: (value) => {
+                                if (!/^[A-Z][\_a-zA-Z0-9\@]*$/.test(value)) { 
+                                    return "Name must be a valid Erlang variable name"; 
+                                }
+                                return null;
+                            }});
+                            break;
+                        case "atom":
+                            input = await window.showInputBox({placeHolder: args[0].user_input.text ?? "New name", validateInput: (value) => {
+                                if (!/^[a-z][\_a-zA-Z0-9\@]*$/.test(value) || !/^[\'][\_a-zA-Z0-9\@]*[\']$/.test(value)) {
+                                    return "Name must be a valid Erlang atom"; 
+                                }
+                                return null;
+                            }});
+                            break;
+                        case "file":
+                            const uri = await window.showOpenDialog({canSelectFiles: true, canSelectFolders: false, canSelectMany: false});
+                            if (uri !== undefined) {
+                                input = uri[0].fsPath;
+                            }
+                            break;
+                        default:
+                            window.showErrorMessage("Unknown user input type: " + args[0].user_input.type);
+                            break;
+                    }
+                    if (input !== undefined) {
+                        args = args.slice(0);
+                        args[0].user_input.value = input;
+                    }
+                };
+                return next(command, args);
+			}
+		}
     };
 
     let serverPath = workspace.getConfiguration('erlang_ls').serverPath;
