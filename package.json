@@ -64,6 +64,11 @@
           "default": "",
           "description": "Override the default path of the els_dap executable with a custom one."
         },
+        "erlang_ls.config.path": {
+          "type": "string",
+          "description": "Path to the erlang_ls.config file. This can either be absolute or relative to the project root",
+          "default": ""
+        },
         "erlang_ls.logPath": {
           "scope": "window",
           "type": "string",
@@ -86,6 +91,7 @@
           "default": "none",
           "description": "Log level of LS server"
         }
+
       }
     },
     "languages": [

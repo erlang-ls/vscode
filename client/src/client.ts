@@ -19,6 +19,11 @@ export async function get_client(context: ExtensionContext): Promise<LanguageCli
                 workspace.createFileSystemWatcher('**/rebar.config'),
                 workspace.createFileSystemWatcher('**/rebar.lock')
             ]
+        },
+        initializationOptions: {
+           erlang: {
+               config_path: workspace.getConfiguration('erlang_ls').get('config.path'),
+           }
         }
     };
 
