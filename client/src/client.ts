@@ -22,14 +22,19 @@ export async function get_client(context: ExtensionContext): Promise<LanguageCli
         },
         middleware: {
             executeCommand: async (command, args, next) => {
-                //Ask for user input if the argument contains {user_input: {type: string, text : string|null}}
-                //Currently used by Wrangler
-                if (args.length >= 1 && "user_input" in args[0] && "type" in args[0].user_input) {
+                //Ask for user input if the argument contains {user_input: {type: string, text? : string}}
+                //Used by Wrangler
+                if (command.split(':').length >= 2
+                    && command.split(':')[1].startsWith("wrangler-")
+                    && args.length >= 1 
+                    && "user_input" in args[0] 
+                    && "type" in args[0].user_input) 
+                {
                     var input: string;
                     switch (args[0].user_input.type) {
                         case "variable":
                             input = await window.showInputBox({
-                                placeHolder: args[0].user_input.text, validateInput: (value) => {
+                                placeHolder: args[0].user_input.text ?? "New name", validateInput: (value) => {
                                     if (!/^[A-Z][\_a-zA-Z0-9\@]*$/.test(value)) {
                                         return "Name must be a valid Erlang variable name";
                                     }
@@ -47,6 +52,16 @@ export async function get_client(context: ExtensionContext): Promise<LanguageCli
                                 }
                             });
                             break;
+                        case "macro":
+                            input = await window.showInputBox({
+                                placeHolder: args[0].user_input.text ?? "New name", validateInput: (value) => {
+                                    if (!(/^[\_a-zA-Z0-9\@]+$/.test(value))) {
+                                        return "Name must be a valid Erlang macro name";
+                                    }
+                                    return null;
+                                }
+                            });
+                            break;
                         case "file":
                             const uri = await window.showOpenDialog({ canSelectFiles: true, canSelectFolders: false, canSelectMany: false });
                             if (uri !== undefined) {
@@ -57,9 +72,12 @@ export async function get_client(context: ExtensionContext): Promise<LanguageCli
                             window.showErrorMessage("Unknown user input type: " + args[0].user_input.type);
                             break;
                     }
+                    args = args.slice(0);
                     if (input !== undefined) {
-                        args = args.slice(0);
                         args[0].user_input.value = input;
+                    } else {
+                        //abort execution
+                        return;
                     }
                 };
                 return next(command, args);
