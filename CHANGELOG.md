@@ -1,5 +1,12 @@
 ## Changelog
 
+### 0.0.37
+
+Server (0.41.2 -> 0.43.0)
+
+- https://github.com/erlang-ls/erlang_ls/releases/tag/0.43.0
+- https://github.com/erlang-ls/erlang_ls/releases/tag/0.42.0
+
 ### 0.0.36
 
 Server (0.37.0 -> 0.41.2)
