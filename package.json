@@ -64,6 +64,12 @@
           "default": "",
           "description": "Override the default path of the els_dap executable with a custom one."
         },
+        "erlang_ls.escriptPath": {
+          "scope": "window",
+          "type": "string",
+          "default": "",
+          "description": "Override the default path of the escript executable with a custom one."
+        },
         "erlang_ls.logPath": {
           "scope": "window",
           "type": "string",
