@@ -78,3 +78,37 @@ Jump to the module you're looking for, in no time.
 ### Folding
 
 Focus on what's important, fold the rest.
+
+## Building the Extension
+
+The following instructions are useful to build your own language server extension package:
+
+You will have to have `nodejs` installed and have the repository cloned already.
+
+Fetch the submodules of the extension:
+
+```bash
+git submodule update --remote
+```
+
+Checkout a commit from the Erlang LS repository.
+
+```bash
+cd erlang_ls
+git checkout $YOUR_ERLANG_LS_VERSION
+cd ..
+```
+
+Download JavaScript dependencies in the main directory. This will create a
+`erlang-ls-*.vsix` file.
+
+```bash
+npm install
+npm run vscode:prepublish
+```
+
+
+1. Open Visual Studio Code
+2. View menu / Command Palette
+3. Use the command "Developer: Install Extension From Location"
+4. Open the directory of your freshly created `.vsix` file.
