@@ -17,7 +17,7 @@ jobs:
     - name: Setup Erlang
       uses: erlef/setup-beam@v1
       with:
-        otp-version: 22
+        otp-version: 23
         rebar3-version: 3.18.0
     - name: Show NPM version
       run: npm --version
