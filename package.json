@@ -228,7 +228,7 @@
   },
   "files": [
     "erlang_ls/_build/default/bin/erlang_ls",
-    "erlang_ls/_build/dap/bin/els_dap",
+    "els_dap/_build/default/bin/els_dap",
     "erlang.tmbundle"
   ],
   "devDependencies": {

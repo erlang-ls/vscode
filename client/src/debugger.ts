@@ -34,7 +34,7 @@ class ErlangDebugAdapterExecutableFactory implements vscode.DebugAdapterDescript
         } else {
             // use default
             args = [ this.context.asAbsolutePath(
-                path.join('erlang_ls', '_build', 'dap', 'bin', 'els_dap')
+                path.join('els_dap', '_build', 'default', 'bin', 'els_dap')
             ) ];
         }
         return new vscode.DebugAdapterExecutable(command, args, undefined);
