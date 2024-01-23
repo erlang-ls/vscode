@@ -101,13 +101,18 @@ export async function get_client(context: ExtensionContext): Promise<LanguageCli
         serverArgs.push("--log-dir", logPath);
     }
 
+    let escriptCmd = workspace.getConfiguration('erlang_ls').escriptPath;
+    if (escriptCmd == "") {
+        escriptCmd = "escript";
+    }
+    
     let serverOptions: ServerOptions = {
-        command: 'escript',
+        command: escriptCmd,
         args: serverArgs,
         transport: TransportKind.stdio
     };
 
-    verifyExecutable(serverPath);
+    verifyExecutable(serverPath, escriptCmd);
 
     return new LanguageClient(
         'erlang_ls',
@@ -117,8 +122,8 @@ export async function get_client(context: ExtensionContext): Promise<LanguageCli
     );
 }
 
-export function verifyExecutable(serverPath: string) {
-    const res = spawnSync('escript', [serverPath, "--version"]);
+export function verifyExecutable(serverPath: string, escriptCmd:string) {
+    const res = spawnSync(escriptCmd, [serverPath, "--version"]);
     if (res.status !== 0) {
         window.showErrorMessage('Could not start Language Server. Error: ' + res.stdout);
     }
