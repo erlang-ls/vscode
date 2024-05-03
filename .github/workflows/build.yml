@@ -9,7 +9,7 @@ on:
       - synchronize
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -22,8 +22,8 @@ jobs:
     - name: Setup Erlang
       uses: erlef/setup-beam@v1
       with:
-        otp-version: 23
-        rebar3-version: 3.18.0
+        otp-version: 24
+        rebar3-version: 3.22.0
     - name: Show NPM version
       run: npm --version
     - run: npm install
