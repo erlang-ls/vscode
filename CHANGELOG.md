@@ -1,5 +1,14 @@
 ## Changelog
 
+### 0.0.44
+
+Bump OTP version to 24
+Add custom escript runner configuration option
+
+Server (0.52.0 -> 0.53.0)
+
+- https://github.com/erlang-ls/erlang_ls/releases/tag/0.52.0
+
 ### 0.0.43
 
 Server (0.50.0 -> 0.52.0)
