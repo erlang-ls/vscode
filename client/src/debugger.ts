@@ -26,7 +26,7 @@ class ErlangDebugAdapterExecutableFactory implements vscode.DebugAdapterDescript
         const erlangConfig = vscode.workspace;
         const executable = erlangConfig.getConfiguration('erlang_ls').get<string>('dapPath') || '';
 
-        let command = 'escript';
+        const command = erlangConfig.getConfiguration('erlang_ls').get<string>('escriptPath') || 'escript';
         let args;
 
         if (executable.length > 0) {
