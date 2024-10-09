@@ -1,5 +1,12 @@
 ## Changelog
 
+### 0.0.45
+
+Server (0.53.0 -> 1.0.0)
+
+- https://github.com/erlang-ls/erlang_ls/releases/tag/0.54.0
+- https://github.com/erlang-ls/erlang_ls/releases/tag/1.0.0
+
 ### 0.0.44
 
 Bump OTP version to 24
